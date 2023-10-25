@@ -20,7 +20,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./src/assets/images/app-icon.png",
         "backgroundColor": "#222"
-      }
+      },
+      "package": "com.tebunia.tica"
     },
     "web": {
       "favicon": "./src/assets/images/app-icon.png",
