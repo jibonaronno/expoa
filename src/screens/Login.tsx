@@ -10,7 +10,8 @@ import {
     TextInput,
     TouchableWithoutFeedback,
     View,
-    Button
+    Button,
+    StyleSheet
   } from "react-native";
 
   // import { Button, SocialIcon } from "react-native-elements";
@@ -38,7 +39,7 @@ import {
       <KeyboardAvoidingView style={styles.containerView} behavior="padding">
         <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
           <View style={styles.loginScreenContainer}>
-            <View style={styles.loginFormView}>
+            {/* <View style={styles.loginFormView}> */}
               <Text style={styles.logoText}>Instamobile</Text>
               <TextInput
                 placeholder="Username"
@@ -55,24 +56,52 @@ import {
                 onPress={() => onLoginPress()}
                 title="Login"
               />
-              <View style={{flexDirection: 'row', flexWrap: 'wrap',}}>
+              {/* <View style={{flexDirection: 'row', flexWrap: 'wrap',}}> */}
+              {/* <View style={stylesA.container}> */}
                 <Button
                   onPress={() => onUserInfoPress()}
+                  
                   title="User Info"
                 />
                 <Button
                   onPress={() => onWorktypesPress()}
                   title="Work Types"
                 />
-              </View>
+              {/* </View> */}
             <Button
               onPress={() => onFbLoginPress()}
               title="Login With Facebook"
             />
-            </View>
+            {/* </View> */}
           </View>
         </TouchableWithoutFeedback>
       </KeyboardAvoidingView>
     );
   }
+
+  const stylesA = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    header: {
+        width: '100%',
+        height: '15%',
+        backgroundColor: '#c8c8c8',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: 20,
+    },
+    boldtext: {
+        fontWeight: 'bold',
+        fontSize: 14
+    },
+    body: {
+        backgroundColor: 'yellow',
+        padding: 20
+    }
+});
+
   
